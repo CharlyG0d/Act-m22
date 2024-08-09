@@ -1,0 +1,540 @@
+
+body {
+  font-family: $fontFamily;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+} 
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: $colorNavbar;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease, color 0.5s ease;
+
+  @include breakpoint2{
+    display: none;
+  }
+
+
+
+  .header-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    background-size: cover;
+    background-position: center;
+  }
+  .header-navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-right: 20px;
+    font-weight: 700;
+  }
+  
+  .header-navbar ul li a {
+    text-decoration: none;
+    color: $colorText;
+   border-radius: $borderRadius;
+  }
+  .header-link:hover, .active{
+    background-color: $colorButton;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  /* The switch - the box around the slider */
+  
+}
+
+.main{
+background-color: $colorPrimary;
+padding-top: 70px;
+display: grid;
+grid-template-columns: 1fr;
+gap: 20px;
+place-items: center;
+height: 100%;
+justify-content: center;
+align-items: center;
+transition: background-color 0.5s ease, color 0.5s ease;
+
+@include breakpoint2{
+  padding-top: 0;
+}
+
+
+.main-section {
+  color: $colorText;
+  font-size: clamp(1.5rem, 2vw, 2.25rem);
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 20px 0;
+}
+
+.main-section__title {
+  color: $colorText;
+  font-size: clamp(3.3rem, 5vw, 3.6rem);
+  letter-spacing: -3px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  z-index: 500; /* Un valor menor que el del header */
+  color: white;
+}
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $colorText;
+}
+
+.swiper-slide img {
+  display: block;
+  width:  70%;
+  height: 70%;
+  object-fit: cover;
+}
+}
+/* Ajustes para contacto*/
+.main-contacto{
+background-color: $colorPrimary;
+  padding-top: 70px;
+display: grid;
+grid-template-columns: 1fr;
+gap: 20px;
+place-items: center;
+height: 100%;
+justify-content: center;
+align-items: center;
+
+
+.section-contacto {
+  color: $colorText;
+  font-size: clamp(1.5rem, 2vw, 2.25rem);
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.main-contacto__title {
+  color: $colorText;
+  font-size: clamp(3.3rem, 5vw, 3.6rem);
+  letter-spacing: -3px;
+}
+
+
+
+
+.contacto{
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.info{
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+      padding: 25px 15px;
+}
+
+.input {
+  max-width: 300px;
+  width: 18rem;
+  height: 30px;
+  border: 2px solid transparent;
+  outline: none;
+  border-bottom: 2px solid #3f3f3f;
+  caret-color: #3f3f3f;
+  background-color: #212121;
+  padding: 5px;
+  margin-bottom: 35px;
+  transition: .5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+  cursor: pointer;
+  
+}
+.input:focus {
+  border: 2px solid #fa4753;
+  caret-color: #fa4753;
+  color: #fa4753;
+  box-shadow: 4px 4px 10px #070707;
+}
+.input:focus::placeholder {
+  color: #fa4753;
+}
+
+.form__label{
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: 20px;
+}
+.form__label:hover{
+  color: #fa4753;
+}
+
+.buttonForm{
+  display: flex;
+  justify-content: center;
+}
+
+.send{
+  margin: 20px 0;
+}
+
+.section{
+  padding-top: 100px;
+  
+}
+.button  {
+  padding: 1.3em 3em;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: $boxShadow;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:active {
+  
+transform: translateY(-1px);
+}
+button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+}
+
+.footer {
+width: 100%;
+box-sizing: border-box;
+padding: 20px 0px;
+text-align: center;
+background-color: $footer;
+color: $secondaryText;
+z-index: 1;
+
+@include breakpoint2{
+  padding-bottom: 7rem;
+  background-color: $colorPrimary;
+  color: $colorText;
+}
+a{
+  text-decoration: none;
+  color: $secondaryText;
+}
+}
+.bottom-navbar {
+display: none;
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+background-color: $colorNavbar;
+align-items: center;
+padding: 5px 5px;
+box-sizing: border-box;
+transition: background-color 0.5s ease, color 0.5s ease;
+
+
+
+@include breakpoint2{
+display: flex;
+flex-wrap: nowrap;
+justify-content: space-evenly;
+flex-direction: column;
+align-items: stretch;
+background-color: $colorNavbar;
+position: fixed;
+border-radius: 5px;
+
+.active{
+  background-color: $colorButton;
+  transition: all 0.5s ease-out;
+}
+   
+ }
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .navLink {
+    color: white;
+    text-decoration: none;
+    
+    &:hover {
+        background-color: $colorButton;
+    }
+
+    img{
+      width: 48px;
+    }
+    @include breakpoint2{
+      padding: 15px ;
+      border-radius: 40px;
+    }
+}
+
+}
+
+
+
+/*Estilos para atractivos*/
+.main-atractivos{
+display: flex;
+justify-content: space-evenly;
+  align-items: center;
+min-height: 100vh;
+background-color: $colorPrimary;
+color: $colorText;
+
+.atractivo-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 50px 10px;
+
+  @include breakpoint2{
+    grid-column-gap: 20px;
+    grid-row-gap: 5px;
+    padding: 100px 10px 10px;
+  }
+}
+.card1{
+  grid-area: 1 / 1 / 2 / 2;
+}
+.card2{
+  grid-area: 2 / 2 / 3 / 3;
+}
+.card3{
+  grid-area: 3 / 1 / 4 / 2;
+}
+.card4{
+  grid-area: 4 / 2 / 5 / 3;
+}
+
+.titulo-content1{
+  grid-area: 1 / 2 / 2 / 3;
+}
+.titulo-content2{
+  grid-area: 2 / 1 / 3 / 2;
+}
+.titulo-content3{
+  grid-area: 3 / 2 / 4 / 3;
+}
+.titulo-content4{
+  grid-area: 4 / 1 / 5 / 2;
+}
+h3{
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  padding: 0 40px;
+  text-align: center;
+}
+
+
+.atractivo-container .atractivo-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  max-width: 100%;
+  height: 330px;
+  background: #FFF;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: $boxShadow;
+
+  @include breakpoint2{
+    width: 280px;
+    height: 320px;
+  }
+}
+
+.atractivo-container .atractivo-card:hover {
+  height: 450px;
+
+  @include breakpoint2{
+    height: 435px;
+  }
+}
+
+.atractivo-container .atractivo-card .img-box {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  
+  @include breakpoint2{
+    width: 270px;
+    height: 200px;
+  }
+}
+
+.atractivo-container .atractivo-card:hover .img-box {
+  top: -100px;
+  scale: 0.80;
+  box-shadow: $boxShadow;
+}
+
+.atractivo-container .atractivo-card .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.atractivo-container .atractivo-card .card-content {
+  position: absolute;
+  top: 240px;
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+  
+}
+
+.atractivo-container .atractivo-card:hover .card-content {
+  top: 90px;
+  height: 100%;
+}
+
+.atractivo-container .atractivo-card .card-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333333;
+}
+
+.atractivo-container .atractivo-card .card-content p {
+  color: #333;
+}
+
+/* Estilos básicos para el modal */
+.modal {
+display: none;  
+position: fixed;
+z-index: 1;     
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;     
+text-align: center;                   
+background-color: rgb(0, 0, 0);       
+background-color: rgba(0, 0, 0, 0.4); 
+animation: show .5s;
+
+@keyframes show {
+  0%{
+    transform: translateY(-150vh);
+  
+}
+}
+img{
+height: 360px;
+animation: scale 1s;;
+
+@keyframes scale {
+  0%{
+    transform: scale(0);
+  }
+}
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto; /* 15% desde la parte superior y centrado */
+padding: 20px;
+border: 1px solid #888;
+width: 80%; /* Podrías ajustar el tamaño según sea necesario */
+
+}
+
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+outline: 2px solid #00ff00; 
+ outline-offset: 4px;
+}
+.modal-btn{
+position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  background: #181818;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+.modal-btn:hover {
+opacity: 0.8;
+}
+
+}
