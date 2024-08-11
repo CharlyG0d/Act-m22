@@ -326,8 +326,8 @@ body {
 }
 @media screen and (max-width: 61.25rem) {
   .main-atractivos .atractivo-container {
-    grid-column-gap: 20px;
-    grid-row-gap: 5px;
+    grid-column-gap: 10px;
+    grid-row-gap: 25px;
     padding: 100px 10px 10px;
   }
 }
@@ -356,8 +356,8 @@ body {
   grid-area: 4/1/5/2;
 }
 .main-atractivos h3 {
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  padding: 0 40px;
+  font-size: clamp(1.7rem, 2vw, 2rem);
+  padding: 0 20px;
   text-align: center;
 }
 .main-atractivos .atractivo-container .atractivo-card {
@@ -375,7 +375,7 @@ body {
 }
 @media screen and (max-width: 61.25rem) {
   .main-atractivos .atractivo-container .atractivo-card {
-    width: 280px;
+    width: 230px;
     height: 320px;
   }
 }
@@ -400,7 +400,7 @@ body {
 }
 @media screen and (max-width: 61.25rem) {
   .main-atractivos .atractivo-container .atractivo-card .img-box {
-    width: 270px;
+    width: 225px;
     height: 200px;
   }
 }
