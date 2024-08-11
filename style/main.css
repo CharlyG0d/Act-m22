@@ -375,7 +375,7 @@ body {
 }
 @media screen and (max-width: 61.25rem) {
   .main-atractivos .atractivo-container .atractivo-card {
-    width: 230px;
+    width: 205px;
     height: 320px;
   }
 }
@@ -384,7 +384,7 @@ body {
 }
 @media screen and (max-width: 61.25rem) {
   .main-atractivos .atractivo-container .atractivo-card:hover {
-    height: 435px;
+    height: 500px;
   }
 }
 .main-atractivos .atractivo-container .atractivo-card .img-box {
@@ -400,8 +400,8 @@ body {
 }
 @media screen and (max-width: 61.25rem) {
   .main-atractivos .atractivo-container .atractivo-card .img-box {
-    width: 225px;
-    height: 200px;
+    width: 200px;
+    height: 180px;
   }
 }
 .main-atractivos .atractivo-container .atractivo-card:hover .img-box {
